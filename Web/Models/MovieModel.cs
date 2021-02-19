@@ -10,9 +10,6 @@ namespace Web.Models
     {
         public  int Id { get; set; }
         public string Movie_name { get; set; }
-        
-        //public string AuthorName { get; set; }
-        //public string Actors { get; set; }
         public int Movie_year { get; set; }
         public string Sipnosis { get; set; }
 
@@ -22,7 +19,6 @@ namespace Web.Models
             string query = "SELECT * FROM movie";
             var result = cn.Query<MovieModel>(query).ToList();
             return result;
-
         }
 
         public bool Insert(MovieModel model)
